@@ -1,13 +1,66 @@
+
 <!DOCTYPE html>
 
 <html>
   <head>
     <title>CSK003a by M</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Poppins&display=swap" rel="stylesheet">
+    
+    <style>
+      #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #1f1f1f;
+        
+      }
+      
+      #panel {
+        padding: 50px;
+        display: none;
+      }
+      
+      h1, #myYear {
+        color: orange;
+      }
+      
+      h1 {
+        font-family: "Poppins";
+        
+      }
+      
+      p {
+        font-family: "Orelega One";
+        color: #e5eecc;
+      }
+      body {
+        background-color: #e5eecc;
+      }
+    </style>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+              $("#flip").click(function(){
+                        $("#panel").slideToggle("slow");
+              });
+      });
+    </script>
+    
   </head>
   
   <body>
-    <h1>Welcome to Cardano Starter Kit #003!</h1>
-    <p>Where we party like it's 1999</p>
+    <div id="flip">
+      <h1>Welcome to Cardano Starter Kit #003!</h1>
+    </div>
+    <div id="panel">
+      <p>Where we party like it's <span id="myYear"></span></p>
+    </div>
+    <script>
+      const year = 2010;
+      document.getElementById("myYear").innerHTML = year
+    </script>
+    
   </body>
   
 </html>
